@@ -1,0 +1,55 @@
+import random as r         
+def dice(x):
+    if x == 1:
+        print('-------')
+        print('|     |')
+        print('|  0  |')
+        print('|     |')
+        print('-------')
+    elif x == 2:
+        print('-------')
+        print('|  0  |')
+        print('|     |')
+        print('|  0  |')
+        print('-------')
+    elif x == 3:
+        print('-------')
+        print('|0    |')
+        print('|  0  |')
+        print('|    0|')
+        print('-------')
+    elif x == 4:
+        print('-------')
+        print('|0   0|')
+        print('|     |')
+        print('|0   0|')
+        print('-------')
+    elif x == 5:
+        print('-------')
+        print('|0   0|')
+        print('|  0  |')
+        print('|0   0|')
+        print('-------')
+    elif x == 6:
+        print('-------')
+        print('|0   0|')
+        print('|0   0|')
+        print('|0   0|')
+        print('-------')
+
+
+if __name__=="__main__":
+
+    print('Welcome to Digidice')
+
+    while(True):
+        n = input('Enter y for roll again and q for quit: ')
+        if n=='y':                  # condition for rolling again
+            x=r.randint(1,6)
+            dice(x)
+        elif n=='q':                # condition for quit
+            break
+        else:                       # For invalid key
+            print('Invalid')
+
+    print('Thankyou for using Digidice')
